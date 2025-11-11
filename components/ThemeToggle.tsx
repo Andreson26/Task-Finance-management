@@ -9,7 +9,6 @@ export default function ThemeToggle() {
   const [theme, setTheme] = useState<Theme>("light");
   const [mounted, setMounted] = useState(false);
 
-  // Initialize theme safely on mount
   useEffect(() => {
     queueMicrotask(() => {
       const savedTheme = localStorage.getItem("theme") as Theme | null;
